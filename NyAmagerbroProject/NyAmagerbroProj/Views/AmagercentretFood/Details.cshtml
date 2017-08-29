@@ -1,0 +1,50 @@
+﻿@model NyAmagerbroProj.Models.AmagercentretStore.AmagercentretFood
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AmagercentretFood</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Navn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Navn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Addresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Addresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Åbningstider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Åbningstider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
