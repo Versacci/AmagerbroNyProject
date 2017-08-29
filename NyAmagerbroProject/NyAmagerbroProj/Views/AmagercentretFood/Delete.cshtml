@@ -1,0 +1,56 @@
+﻿@model NyAmagerbroProj.Models.AmagercentretStore.AmagercentretFood
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AmagercentretFood</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Navn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Navn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Addresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Addresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Åbningstider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Åbningstider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefon)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

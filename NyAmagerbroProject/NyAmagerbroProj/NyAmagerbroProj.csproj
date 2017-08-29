@@ -196,28 +196,49 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AmagerbroClothesController.cs" />
-    <Compile Include="Controllers\AmagerbroElectronicsController.cs" />
-    <Compile Include="Controllers\AmagerbroFoodController.cs" />
+    <Compile Include="Controllers\AmagerbroStore\AmagerbroClothesController.cs" />
+    <Compile Include="Controllers\AmagerbroStore\AmagerbroElectronicsController.cs" />
+    <Compile Include="Controllers\AmagerbroStore\AmagerbroFoodController.cs" />
+    <Compile Include="Controllers\AmagercentretStore\AmagercentretClothesController.cs" />
+    <Compile Include="Controllers\AmagercentretStore\AmagercentretElectronicsController.cs" />
+    <Compile Include="Controllers\AmagercentretStore\AmagercentretFoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708231212378_InitialCreate.cs" />
+    <Compile Include="Migrations\201708231212378_InitialCreate.Designer.cs">
+      <DependentUpon>201708231212378_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708291307490_addedAmagercentretStores.cs" />
+    <Compile Include="Migrations\201708291307490_addedAmagercentretStores.Designer.cs">
+      <DependentUpon>201708291307490_addedAmagercentretStores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AmagerbroClothesStore.cs" />
+    <Compile Include="Models\AmagerbroStore\AmagerbroClothesStore.cs" />
     <Compile Include="Models\AmagerbroDbContext.cs" />
-    <Compile Include="Models\AmagerbroElectronicsStore.cs" />
-    <Compile Include="Models\AmagerbroFoodStore.cs" />
+    <Compile Include="Models\AmagerbroStore\AmagerbroElectronicsStore.cs" />
+    <Compile Include="Models\AmagerbroStore\AmagerbroFoodStore.cs" />
+    <Compile Include="Models\AmagercentretStore\AmagercentretClothes.cs" />
+    <Compile Include="Models\AmagercentretStore\AmagercentretElectronics.cs" />
+    <Compile Include="Models\AmagercentretStore\AmagercentretFood.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\AmagerbroClothesRep.cs" />
-    <Compile Include="Repository\AmagerbroElectronicsRep.cs" />
-    <Compile Include="Repository\AmagerbroFoodRep.cs" />
-    <Compile Include="Repository\IAmagerbroClothesRep.cs" />
-    <Compile Include="Repository\IAmagerbroElectronicsRep.cs" />
-    <Compile Include="Repository\IAmagerbroFoodRep.cs" />
+    <Compile Include="Repository\AmagerbroRepository\AmagerbroClothesRep.cs" />
+    <Compile Include="Repository\AmagerbroRepository\AmagerbroElectronicsRep.cs" />
+    <Compile Include="Repository\AmagerbroRepository\AmagerbroFoodRep.cs" />
+    <Compile Include="Repository\AmagerbroRepository\IAmagerbroClothesRep.cs" />
+    <Compile Include="Repository\AmagerbroRepository\IAmagerbroElectronicsRep.cs" />
+    <Compile Include="Repository\AmagerbroRepository\IAmagerbroFoodRep.cs" />
+    <Compile Include="Repository\AmagercentretRepository\AmagercentretClothesRep.cs" />
+    <Compile Include="Repository\AmagercentretRepository\AmagercentretElectronicsRep.cs" />
+    <Compile Include="Repository\AmagercentretRepository\AmagercentretFoodRep.cs" />
+    <Compile Include="Repository\AmagercentretRepository\IAmagercentretClothesRep.cs" />
+    <Compile Include="Repository\AmagercentretRepository\IAmagercentretElectronicsRep.cs" />
+    <Compile Include="Repository\AmagercentretRepository\IAmagercentretFoodRep.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +311,21 @@
     <Content Include="Views\AmagerbroElectronics\Delete.cshtml" />
     <Content Include="Views\AmagerbroFood\Index.cshtml" />
     <Content Include="Views\AmagerbroFood\Create.cshtml" />
+    <Content Include="Views\AmagercentretClothes\Index.cshtml" />
+    <Content Include="Views\AmagercentretClothes\Create.cshtml" />
+    <Content Include="Views\AmagercentretClothes\Edit.cshtml" />
+    <Content Include="Views\AmagercentretClothes\Details.cshtml" />
+    <Content Include="Views\AmagercentretClothes\Delete.cshtml" />
+    <Content Include="Views\AmagercentretElectronics\Index.cshtml" />
+    <Content Include="Views\AmagercentretElectronics\Create.cshtml" />
+    <Content Include="Views\AmagercentretElectronics\Edit.cshtml" />
+    <Content Include="Views\AmagercentretElectronics\Details.cshtml" />
+    <Content Include="Views\AmagercentretElectronics\Delete.cshtml" />
+    <Content Include="Views\AmagercentretFood\Index.cshtml" />
+    <Content Include="Views\AmagercentretFood\Create.cshtml" />
+    <Content Include="Views\AmagercentretFood\Edit.cshtml" />
+    <Content Include="Views\AmagercentretFood\Details.cshtml" />
+    <Content Include="Views\AmagercentretFood\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +337,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708231212378_InitialCreate.resx">
+      <DependentUpon>201708231212378_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708291307490_addedAmagercentretStores.resx">
+      <DependentUpon>201708291307490_addedAmagercentretStores.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
