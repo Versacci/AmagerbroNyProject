@@ -20,6 +20,31 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+
+                <!-- Single button for amagerbro -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Butikker på amagerbro <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Tøj", "Index", "AmagerbroClothes")</li>
+                        <li>@Html.ActionLink("Elektronik", "Index", "AmagerbroElectronics")</li>
+                        <li>@Html.ActionLink("Mad & drikke", "Index", "AmagerbroFood")</li>
+                    </ul>
+                </div>
+
+                <!-- Single button for amagercentret -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Butikker i amagercentret <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Tøj", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Elektronik", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Mad & drikke", "Index", "Home")</li>
+                    </ul>
+                </div>
+
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
