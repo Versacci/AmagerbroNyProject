@@ -9,6 +9,19 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@using (Html.BeginForm("Index", "AmagerbroElectronics", FormMethod.Get))
+
+{
+<div>
+    @Html.TextBox("SearchString", null, new { @class = "col-xs-6 col-sm-4", placeholder = "Search..." })
+</div>
+
+<div>
+    <input type="submit" class="btn btn-warning btn-sm" value="Search" />
+</div>
+}
+
 <table class="table">
     <tr>
         <th>
