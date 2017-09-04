@@ -1,4 +1,5 @@
-﻿using NyAmagerbroProj.Models.AmagercentretStore;
+﻿using NyAmagerbroProj.Models;
+using NyAmagerbroProj.Models.AmagercentretStore;
 using NyAmagerbroProj.Repository.AmagercentretRepository;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace NyAmagerbroProj.Controllers.AmagercentretStore
     {
         // GET: AmagerbroClothes
         private IAmagercentretElectronicsRep<AmagercentretElectronics> amagerRepository = null;
+        private AmagerbroDbContext db = new AmagerbroDbContext();
 
         public AmagercentretElectronicsController()
         {
@@ -19,10 +21,18 @@ namespace NyAmagerbroProj.Controllers.AmagercentretStore
         }
 
         // GET: AmagercentretElectronics
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            var AmagercentretElectronics = amagerRepository.GetAll();
-            return View(AmagercentretElectronics);
+            //This line creates a LINQ query to select from my model class
+            var electronics = from m in db.AmagercentretElectronics
+                          select m;
+            //If the searchString parameter contains a string, the title query is modified to filter
+            //on the value of the search string, using the code below
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                electronics = electronics.Where(s => s.Navn.Contains(searchString));
+            }
+            return View(electronics);
         }
 
         [HttpGet]

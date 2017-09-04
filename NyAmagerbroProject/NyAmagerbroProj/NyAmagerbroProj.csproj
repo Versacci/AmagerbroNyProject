@@ -326,6 +326,9 @@
     <Content Include="Views\AmagercentretFood\Edit.cshtml" />
     <Content Include="Views\AmagercentretFood\Details.cshtml" />
     <Content Include="Views\AmagercentretFood\Delete.cshtml" />
+    <Content Include="Views\AmagerbroFood\Edit.cshtml" />
+    <Content Include="Views\AmagerbroFood\Details.cshtml" />
+    <Content Include="Views\AmagerbroFood\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

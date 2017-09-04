@@ -10,8 +10,8 @@ namespace NyAmagerbroProj.Controllers
 {
     public class AmagerbroFoodController : Controller
     {
-
         private IAmagerbroFoodRep<AmagerbroFoodStore> amagerRepository = null;
+        private AmagerbroDbContext db = new AmagerbroDbContext();
 
         public AmagerbroFoodController()
         {
@@ -19,10 +19,18 @@ namespace NyAmagerbroProj.Controllers
         }
 
         // GET: AmagerbroFood
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            var AmagerbroFoodStore = amagerRepository.GetAll();
-            return View(AmagerbroFoodStore);
+            //This line creates a LINQ query to select from my model class
+            var food = from m in db.AmagerbroFoodStore
+                          select m;
+            //If the searchString parameter contains a string, the title query is modified to filter
+            //on the value of the search string, using the code below
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                food = food.Where(s => s.Navn.Contains(searchString));
+            }
+            return View(food);
         }
 
         [HttpGet]
