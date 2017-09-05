@@ -48,7 +48,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Om os", "About", "Home")</li>
-                    <li>@Html.ActionLink("Find amagerbro på kortet", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Find amagerbro på kortet", "GoogleMaps", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -67,3 +67,29 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+@*Here we use the code for our Google maps.
+    We use our api key which comes from Google developer site to get access to the google maps. *@
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPE8Roq_bEMJ0aY8-np4g6zumE5-iOKeg&sensor=false"></script>
+<script type="text/javascript">
+
+   $(document).ready(function () {
+     initialize();
+   });
+   function initialize() {
+     var mapOptions = {
+         center: new google.maps.LatLng(55.663182, 12.6026252),
+       zoom: 17,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+     };
+     var map = new google.maps.Map(document.getElementById("map_canvas"),
+       mapOptions);
+     // code to create a marker on our google maps
+     //var latlng = new google.maps.LatLng(55.663182, 12.6026252);
+     //var marker = new google.maps.Marker({
+     //  position: latlng,
+     //  map: map,
+     //  title: 'My Place'
+     //});
+   }
+</script>
