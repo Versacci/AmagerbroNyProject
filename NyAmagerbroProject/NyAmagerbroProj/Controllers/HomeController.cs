@@ -26,5 +26,11 @@ namespace NyAmagerbroProj.Controllers
 
             return View();
         }
+
+        public ActionResult GoogleMaps()
+        {
+            ViewBag.Message = "Google Maps";
+            return View();
+        }
     }
 }

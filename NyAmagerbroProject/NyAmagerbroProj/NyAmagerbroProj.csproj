@@ -329,6 +329,7 @@
     <Content Include="Views\AmagerbroFood\Edit.cshtml" />
     <Content Include="Views\AmagerbroFood\Details.cshtml" />
     <Content Include="Views\AmagerbroFood\Delete.cshtml" />
+    <Content Include="Views\Home\GoogleMaps.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
