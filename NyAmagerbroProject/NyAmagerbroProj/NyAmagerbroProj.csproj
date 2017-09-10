@@ -244,6 +244,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\amagerbro.jpg" />
+    <Content Include="Content\images\amagercentret.jpg" />
+    <Content Include="Content\StyleLayout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -304,32 +307,29 @@
     <Content Include="Views\AmagerbroElectronics\Index.cshtml" />
     <Content Include="Views\AmagerbroElectronics\Create.cshtml" />
     <Content Include="Views\AmagerbroClothes\Edit.cshtml" />
-    <Content Include="Views\AmagerbroClothes\Details.cshtml" />
     <Content Include="Views\AmagerbroClothes\Delete.cshtml" />
     <Content Include="Views\AmagerbroElectronics\Edit.cshtml" />
-    <Content Include="Views\AmagerbroElectronics\Details.cshtml" />
-    <Content Include="Views\AmagerbroElectronics\Delete.cshtml" />
     <Content Include="Views\AmagerbroFood\Index.cshtml" />
     <Content Include="Views\AmagerbroFood\Create.cshtml" />
     <Content Include="Views\AmagercentretClothes\Index.cshtml" />
     <Content Include="Views\AmagercentretClothes\Create.cshtml" />
     <Content Include="Views\AmagercentretClothes\Edit.cshtml" />
-    <Content Include="Views\AmagercentretClothes\Details.cshtml" />
     <Content Include="Views\AmagercentretClothes\Delete.cshtml" />
     <Content Include="Views\AmagercentretElectronics\Index.cshtml" />
     <Content Include="Views\AmagercentretElectronics\Create.cshtml" />
     <Content Include="Views\AmagercentretElectronics\Edit.cshtml" />
-    <Content Include="Views\AmagercentretElectronics\Details.cshtml" />
     <Content Include="Views\AmagercentretElectronics\Delete.cshtml" />
     <Content Include="Views\AmagercentretFood\Index.cshtml" />
     <Content Include="Views\AmagercentretFood\Create.cshtml" />
     <Content Include="Views\AmagercentretFood\Edit.cshtml" />
-    <Content Include="Views\AmagercentretFood\Details.cshtml" />
     <Content Include="Views\AmagercentretFood\Delete.cshtml" />
     <Content Include="Views\AmagerbroFood\Edit.cshtml" />
-    <Content Include="Views\AmagerbroFood\Details.cshtml" />
     <Content Include="Views\AmagerbroFood\Delete.cshtml" />
     <Content Include="Views\Home\GoogleMaps.cshtml" />
+    <Content Include="Views\AmagerbroElectronics\Delete.cshtml" />
+    <Content Include="Views\Home\Renovation.cshtml" />
+    <Content Include="Views\Home\Lokale.cshtml" />
+    <Content Include="Views\Home\Job.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

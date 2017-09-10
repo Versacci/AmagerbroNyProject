@@ -4,17 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Tøj butikker i amagercentret</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Opret ny butik", "Create")
 </p>
 
 @using (Html.BeginForm("Index", "AmagercentretClothes", FormMethod.Get))
 
 {
     <div>
-        @Html.TextBox("SearchString", null, new { @class = "col-xs-6 col-sm-4", placeholder = "Search..." })
+        @Html.TextBox("SearchString", null, new { @class = "col-xs-6 col-sm-4", placeholder = "Søg..." })
     </div>
 
     <div>
@@ -54,9 +54,8 @@
             @Html.DisplayFor(modelItem => item.telefon)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Rediger", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Slet", "Delete", new { id=item.ID })
         </td>
     </tr>
 }
